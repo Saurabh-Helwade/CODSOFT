@@ -3,26 +3,29 @@ import java.util.Scanner;
 public class StudentGrade {
     public static void main(String[] agrs){
         Scanner scanner = new Scanner(System.in);
-        System.out.println("\nWelcome To Student Result Valuation In Grade System...!");
-        System.out.print("Enter Student Name :- ");
+        System.out.print("---------------------------------------------------------");
+        System.out.println("\n     Welcome To Student Result Valuation System...!");
+        System.out.println("---------------------------------------------------------");
+        System.out.print("\nEnter Student Name :- ");
         String StudentName = scanner.nextLine();
         System.out.print("Enter Roll Number :- ");
         int rollno = scanner.nextInt();
-        System.out.print("Enter Total Number of Subjects :-");
+        System.out.print("Enter Total Number of Subjects :- ");
         int totalSubjects = scanner.nextInt();
         int subjectMarks;
+
         int totalMarks = 0;
         System.out.println("\nEnter marks obtained out of 100 in each subject :-");
         
         for(int i=1 ;i <= totalSubjects; i++) {
-            System.out.print("Enter Marks For Subject - "+ ( i ) + " :- ");
+            System.out.print("\nEnter Marks For Subject - "+ ( i ) + " :- ");
             subjectMarks = scanner.nextInt();
             totalMarks += subjectMarks;
         }
         System.out.println();
-        System.out.println("Total Marks :-" +totalMarks+"/"+totalSubjects*100);
+        System.out.println("Total Marks :- " +totalMarks+"/"+totalSubjects*100);
         float avgPercent = (float) totalMarks / totalSubjects ;
-        System.out.println("Average Percent :-"+String.format("%.2f",avgPercent)+"%");
+        System.out.println("Average Percent :- "+String.format("%.2f",avgPercent)+"%");
 
         char grade;
 
@@ -60,12 +63,12 @@ public class StudentGrade {
         System.out.println();
         System.out.println("Result Valuation Of " + StudentName + " Having Roll No. - " +rollno );
         System.out.println("----------------------------------------------------------");
-        System.out.println("                   Result Of "+ StudentName                   );
+        System.out.println("|                Result Of "+ StudentName+"                |");
         System.out.println("----------------------------------------------------------");
-        System.out.println("Total_Marks" + "\t|     Average_Percent" + "\t|\tGrade      ");
+        System.out.println("Total_Marks" + "\t|     Average_Percent" + "\t|\tGrade     |");
         System.out.println("----------------------------------------------------------");
         System.out.println( totalMarks + "\t\t\t  " + String.format("%.2f",avgPercent)+" % " + "\t\t" + grade);
         System.out.println("----------------------------------------------------------");
-        
+        System.out.println();
     } 
 }
