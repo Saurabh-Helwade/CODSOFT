@@ -38,13 +38,20 @@ public class ATM {
     public void userinterface() {
         System.out.println();
         System.out.println("---------------------------------------------");
-        System.out.println("     Welcome To State Bank Of India ATM     ");
+        System.out.println("|     Welcome To State Bank Of India ATM     |");
         System.out.println("---------------------------------------------");
-        System.out.println("\n --ATM Main Menu--");
-        System.out.println("1. Balance Inquiry");
-        System.out.println("2. Withdraw Money");
-        System.out.println("3. Deposit Money");
-        System.out.println("4. Exit");
+        System.out.println();
+        System.out.println("    ----------------------------");
+        System.out.println("    |    ATM Main Menu         |");
+        System.out.println("    ----------------------------");
+        System.out.println("    |  1  |  Check Balance     |");
+        System.out.println("    ----------------------------");
+        System.out.println("    |  2  |  Withdraw          |");
+        System.out.println("    ----------------------------");
+        System.out.println("    |  3  |  Deposit           |");
+        System.out.println("    ----------------------------");
+        System.out.println("    |  4  |  Exit              |");
+        System.out.println("    ----------------------------");
 
     }
     public void services(int option , Scanner scanner) {
@@ -52,7 +59,7 @@ public class ATM {
             case 1:
                 //Check Balance
                 System.out.println("\nYour Transaction Is Successfull !");
-                System.out.println("Available Balance :- Rs."+ bankAccount.getBalance());
+                System.out.println("\nAvailable Balance :- Rs."+ bankAccount.getBalance());
                 break;
 
             case 2:
@@ -65,10 +72,10 @@ public class ATM {
                     System.out.print("Would You Like To Display the Balance on the screen ? (yes/no) :- ");
                     String input = scanner.next();
                     if(input.equals("yes")){
-                        System.out.println("Available Balance :- Rs." +bankAccount.getBalance());
+                        System.out.println("\nAvailable Balance :- Rs." +bankAccount.getBalance());
                     }
                     else {
-                        System.out.println("Thank You For Using SBI ATM !");
+                        System.out.println("\nThank You For Using SBI ATM !");
                     }
                 } else {
                     System.out.println("\nSorry , Transaction Declined Due To Insufficient Balance In You Account.");
@@ -80,7 +87,7 @@ public class ATM {
                 System.out.print("Enter Amount To Be Deposited In Account :- Rs.");
                 double depositAmount = scanner.nextDouble();
                 bankAccount.deposit(depositAmount);
-                System.out.println("\nAmount Rs." +depositAmount+ " Has Been Deposited Succesfully ! \nUpdataed Balance :- Rs." +bankAccount.getBalance());
+                System.out.println("\nAmount Rs." +depositAmount+ " Has Been Deposited Succesfully ! \n\nUpdataed Balance :- Rs." +bankAccount.getBalance());
                 break;
 
             case 4:
