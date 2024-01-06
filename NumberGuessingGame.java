@@ -21,13 +21,13 @@ public class NumberGuessingGame {
             int guessCount = 0;
             System.out.println();
             System.out.println("-------------------------------------------------");
-            System.out.println("      Welcome To The Number Guessing Game !      ");
+            System.out.println("|      Welcome To The Number Guessing Game !      |");
             System.out.println("-------------------------------------------------");
-            System.out.println("Guess any number between 1 to " + maxNumber + "\nYou have " + maxAttempts + " attempts to guess a number");
+            System.out.println("\nGuess any number between 1 to " + maxNumber + "\nYou have " + maxAttempts + " attempts to guess a number");
 
             while(guessCount < maxAttempts) 
             {
-                System.out.print("Enter Your Guess :- ");
+                System.out.print("\nEnter Your Guess :- ");
                 int playerGuess = scanner.nextInt();
                 guessCount++;
                 totalAttempts++;
@@ -42,22 +42,23 @@ public class NumberGuessingGame {
                 }
                 else 
                 {
-                    System.out.println("Nice ! You Have Guessed Correct Number");
+                    System.out.println("\nNice ! You Have Guessed Correct Number");
                     roundsWon++;
                     break;
                 }
             }
-            System.out.println(" Your current score :- Rounds won - " + roundsWon + ", Total attempts - " + totalAttempts);
+            System.out.println(" \nYour current score :- Rounds won - " + roundsWon + ", Total attempts - " + totalAttempts);
             if (guessCount == maxAttempts) 
             {
-                System.out.println("Sorry, you've reached the maximum number of attempts. The correct number was: " + randomNumber);
+                System.out.println("\nSorry, you've reached the maximum number of attempts. The correct number was: " + randomNumber);
             }
 
-            System.out.print("Would you like to play again ? (y/n) :- ");
+            System.out.print("\nWould you like to play again ? (y/n) :- ");
             String playAgainChoice = scanner.next();
             playAgain = playAgainChoice.equals("y");
             rounds++;
-            System.out.println(" You played "+rounds+ " rounds with total " + totalAttempts+ " attempts and won " +roundsWon+ " rounds.");
+            System.out.println(" \nYou played "+rounds+ " rounds with total " + totalAttempts+ " attempts and won " +roundsWon+ " rounds.");
+            System.out.println();
         }
         scanner.close();            
     }
